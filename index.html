@@ -10,8 +10,11 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
-			
+		<script src="assets/js/jquery-3.5.1.js" ></script>
+		 <link rel="stylesheet" href="assets/css/jquery-ui.css">
+		<!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+		<script src="assets/js/jquery-ui.js"></script> 
+	  
 	</head>
 
 	<body>
@@ -122,7 +125,32 @@
 			<!-- </div> -->
 		<!-- </section> -->
 		<div> <a name="Concert_Listings"></a>
-			Upcoming shows
+			<h2>Upcoming shows:</h2>
+			<br>
+			<h3>Exit Points #6: Wednesday, July 29  @8pm EDT</h3>
+			Tyson Headon (electric bass)<br>
+			Jake Butineau (keys)<br>
+			Juan Parra Cancino (guitar and electronics)<br>
+			Mariana Hutten (elextronics)<br>
+			Glen Hall (sax + electronics)<br>
+			Joel Ong (electric guitar)<br>
+			Michael Palumbo (modular synth)<br>
+			Ensembles Tbd
+			<br>
+			<br>
+			<h3>Exit Points #7: Wednesday, August 26  @8pm EDT</h3>
+			Amy Brandon (guitar + electronics)<br>
+			Klugarsh (modular synth)<br>
+			Doug Van Nort (electronics)<br>
+			Pouya Hamidi (sub 37)<br>
+			Esin Gunduz (voice)<br>
+			Michael Palumbo (modular synth)<br>
+			Ensembles Tbd<br>
+			<br>
+			<br>
+
+
+
 		</div>
 		<section>
 			<!-- Exit Points is an electroacoustic improvisation concert held the last Wednesday of every month. 
@@ -134,12 +162,31 @@
 			things related to performing together online. -->
 		</section>
 
+
+		<div id="dialog" title="">
+			<p>This page runs best on chrome or firefox. If you're using something else, watch directly by clicking this link: <a href='https://www.twitch.tv/exitpointsmusic' target="_blank">Exit Points Stream</a><br>Thanks!</p>
+		  </div>
 	</body>
 <script>
 	$(document).ready(function(){
-		setTimeout(function(){
-			alert('This page has difficulty running ono the Brave browser. We at Exit Points suggest using chrome or firefox. Thanks!s');
-		},3000); // 5000 to load it after 5 seconds from page load
+		// alert('This page runs best on chrome or firefox. If using a different browser, please watch directly at: \n\nhttps://www.twitch.tv/exitpointsmusic \nThanks!');
+			$( "#dialog" ).dialog();
+
+		// setTimeout(function(){
+		// 	// $( "#dialog" ).dialog();
+		// },2000); // 5000 to load it after 5 seconds from page load
+	});
+//   $( function() {
+//     $( "#dialog" ).dialog();
+//   } );
+	$("#dialog").dialog({
+		// autoOpen: false,
+		width: 630,
+		position: { my: 'top', at: 'top+150' },
+		modal: true,
+		resizable: false,
+		closeOnEscape: true
 	});
 </script>
+
 	</html>
