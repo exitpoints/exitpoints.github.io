@@ -39,13 +39,10 @@
 						<li><a href="#tips" id="about-link"><span class="icon solid fa-user">Tip Jar PWYC</span></a></li>
 						<li><a href="#Concert_Listings" id="portfolio-link"><span class="icon solid fa-th scrolly">Upcoming</span></a></li>
 						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Us</span></a></li>
-						<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-						<li><a href="#wiki" id="wiki-link"><span class="icon solid fa-th">Wiki</span></a></li>
-
+						<!-- <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li> -->
+						<!-- <li><a href="#wiki" id="wiki-link"><span class="icon solid fa-th">Wiki</span></a></li> -->
 					</ul>
 				</nav>
-				<!-- eventually, check if youtube is live using AA below, if so, modify the DOM to include the youtube stream -->
-				<!-- https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8KWs9ycCjyGMkVsJqbT6RA&type=video&eventType=live&key=AIzaSyAaYO594a7wXuPIWUAxWLXLGabEXzlLVI4 -->
 			</div>
 
 		<div class="bottom">
@@ -64,10 +61,7 @@
 
 
 	<!-- Main -->
-	<div id="main">
-		<!-- <section class="one dark cover"> -->
-			<!-- <div class="container"> -->
-
+	<div id="main">	
 			<div> <a name="livestream"></a>
 				<table>
 					<tr>
@@ -94,18 +88,17 @@
 							<!-- https://chat.restream.io/embed?token=724e7f74-9eec-4fa9-b6e4-cd8dae387459 -->
 							<div class="twitch-chat">
 								<!-- <iframe src="https://chat.restream.io/embed?token=724e7f74-9eec-4fa9-b6e4-cd8dae387459"></iframe> -->
-								<iframe 
+								<!-- <iframe 
 									src="https://player.twitch.tv/embed/exitpointsmusic/chat?&parent=exitpoints.live&parent=www.exitpoints.live&parent=exitpoints.github.io"
 									height="100%" width="100%" frameborder="0" scrolling="no" allowfullscreen="true" autoplay="true">
-								</iframe>
-								<!--
-								<iframe
-									frameborder="0"
-									scrolling="no"
-									src="https://www.twitch.tv/embed/exitpointsmusic/chat?parent=parent=exitpoints.live&parent=www.exitpoints.live&parent=exitpoints.github.io"
+								</iframe> -->
+								<iframe frameborder=0
+									scrolling=no
+									id="exitpointsmusic"
+									src="https://player.twitch.tv/embed/exitpointsmusic/chat?&parent=exitpoints.live&parent=www.exitpoints.live&parent=exitpoints.github.io""
 									height="100%"
 									width="100%">
-								</iframe> -->
+							</iframe>
 							</div>
 						</td>
 					</tr>
