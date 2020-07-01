@@ -9,6 +9,8 @@ function draw() {
 
   textSize(130);
   text('14 JULY', windowWidth/2.5, windowHeight/2);
+  textSize(100);
+  text('start 8PM', windowWidth/2, windowHeight/2 + 40);
   
   let s = 'online audiovisual live performance';
   textSize(15);
