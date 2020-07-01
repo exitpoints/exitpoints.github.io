@@ -6,16 +6,11 @@ function setup() {
 
 function draw() {
 
-  
-  //fill(255, 120, 0, 10);
-  //shearY(random(PI) / 4.0);
-  //strokeWeight(0.2);
-  //triangle(0, 0, 400, 100, 0, 600);
+
   textSize(130);
   text('14 JULY', windowWidth/2.5, windowHeight/2);
   
   let s = 'online audiovisual live performance';
-  //noFill();
   textSize(15);
   text(s, 150, 120, 200, 500);
   
