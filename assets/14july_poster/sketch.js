@@ -28,7 +28,7 @@ function draw() {
   text('EMORY', 150, 230);
   
   textSize(20);
-  text('JAIME THOMPSON', 150, 250);
+  text('JAMIE THOMPSON', 150, 250);
   
   textSize(20);
   text('MICHAEL PALUMBO', 150, 270);
