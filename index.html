@@ -36,7 +36,7 @@
 				<nav id="nav">
 					<ul>
 						<!-- <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li> -->
-						<li><a href="#Upcoming" id="portfolio-link"><span class="icon solid fa-th scrolly">Upcoming</span></a></li>
+						<li><a href="#Featured" id="portfolio-link"><span class="icon solid fa-th scrolly">Featured</span></a></li>
 						<li><a href="#Calendar" id="Calendar"><span class="icon solid fa-th">Calendar</span></a></li>
 
 						<li><a href="#livestream" id="liveStream"><span class="icon solid fa-th">Live Stream</span></a></li>
@@ -73,11 +73,11 @@
 
 
 		<!-- </section> -->
-		<div> <a name="Upcoming"></a>
+		<div> <a name="Featured"></a>
 			<table>
 				<tr>
 					<th>
-						<h2>Upcoming Shows</h2>
+						<h2>Featured Events</h2>
 					</th>
 				</tr>
 				<tr height="600px">
@@ -104,7 +104,8 @@
 				</tr>
 				<tr>
 					<td>
-						<iframe src="https://calendar.google.com/calendar/embed?src=qb68dabg3epivsicsd8npjclvhbds20o%40import.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>					</td>
+						<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FToronto&amp;src=ZXhpdHBvaW50c211c2ljQGdtYWlsLmNvbQ&amp;src=cWI2OGRhYmczZXBpdnNpY3NkOG5wamNsdmhiZHMyMG9AaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;color=%23039BE5&amp;color=%23616161&amp;mode=AGENDA&amp;title=Upcoming%20Events" style="border:solid 1px #777" width="100%" height="400" frameborder="0" scrolling="yes"></iframe>
+						<!-- <iframe src="https://calendar.google.com/calendar/embed?src=qb68dabg3epivsicsd8npjclvhbds20o%40import.calendar.google.com&ctz=America%2FToronto" style="border: 0" width="100%" height="400" frameborder="0" scrolling="no"></iframe>					</td> -->
 					</td>
 				</tr>
 			</table>
@@ -128,7 +129,9 @@
 										src="https://player.twitch.tv/?channel=exitpointsmusic&parent=exitpoints.live&parent=www.exitpoints.live&parent=exitpoints.github.io"
 										height="100%" width="100%" frameborder="0" scrolling="no" allowfullscreen="true" autoplay="true">
 									</iframe>
-									<i>If the player fails to load, go to this link: <br><a href="https://www.twitch.tv/exitpointsmusic" target="_blank">Exit Points Stream</a></i>
+									<i>The live stream works best on Chrome or Firefox. 
+									<!-- <br>If you're using something else (like Brave, or Safari), watch directly by clicking this link: <a href='https://www.twitch.tv/exitpointsmusic' target="_blank">Exit Points Stream</a><br>Thanks!</p> -->
+									If the player fails to load, go to this link: <br><a href="https://www.twitch.tv/exitpointsmusic" target="_blank">Exit Points Stream</a></i>
 				
 								</div>
 							</div>
@@ -206,7 +209,7 @@
 
 					<!-- ! TODO: how to add tip jar to website -->
 					<!-- <iframe src="https://exitpoints.stream/"></iframe> -->
-					<!-- <a href="#Upcoming" class="button scrolly">Concert Listings</a> -->
+					<!-- <a href="#Featured" class="button scrolly">Concert Listings</a> -->
 				<!-- </footer> -->
 
 				
@@ -334,31 +337,31 @@
 		</section>
 
 
-		<div id="dialog" title="Browser">
-			<p>This page runs best on chrome or firefox. 
-			<br>If you're using something else, watch directly by clicking this link: <a href='https://www.twitch.tv/exitpointsmusic' target="_blank">Exit Points Stream</a><br>Thanks!</p>
-		  </div>
+		<!-- <div id="dialog" title="Browser">
+			<p>The live stream works best on Chrome or Firefox. 
+			<br>If you're using something else (like Brave, or Safari), watch directly by clicking this link: <a href='https://www.twitch.tv/exitpointsmusic' target="_blank">Exit Points Stream</a><br>Thanks!</p>
+		  </div> -->
 	</body>
 <script>
-	$(document).ready(function(){
-		// alert('This page runs best on chrome or firefox. If using a different browser, please watch directly at: \n\nhttps://www.twitch.tv/exitpointsmusic \nThanks!');
-			$( "#dialog" ).dialog();
+	// $(document).ready(function(){
+	// 	// alert('This page runs best on chrome or firefox. If using a different browser, please watch directly at: \n\nhttps://www.twitch.tv/exitpointsmusic \nThanks!');
+	// 		$( "#dialog" ).dialog();
 
-		// setTimeout(function(){
-		// 	// $( "#dialog" ).dialog();
-		// },2000); // 5000 to load it after 5 seconds from page load
-	});
+	// 	// setTimeout(function(){
+	// 	// 	// $( "#dialog" ).dialog();
+	// 	// },2000); // 5000 to load it after 5 seconds from page load
+	// });
 //   $( function() {
 //     $( "#dialog" ).dialog();
 //   } );
-	$("#dialog").dialog({
-		// autoOpen: false,
-		width: "50%",
-		position: { my: 'top', at: 'top+50' },
-		modal: true,
-		resizable: false,
-		closeOnEscape: true
-	});
+	// $("#dialog").dialog({
+	// 	// autoOpen: false,
+	// 	width: "50%",
+	// 	position: { my: 'top', at: 'top+50' },
+	// 	modal: true,
+	// 	resizable: false,
+	// 	closeOnEscape: true
+	// });
 
 	// iFrame loader
 	// function newSite() {
@@ -368,21 +371,30 @@
 
     // document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
 	// }
-		iframe = document.getElementById('myIframe')
-	function show1() { 
-		document.getElementById('myIframe').src = '/14july.html'
+	let counter = 0
+	let FeaturedEvents = [
+		'/14july.html'
+	]
+	function FeaturedEventsRoll() { 
+		document.getElementById('myIframe').src = FeaturedEvents[counter]
     // iframe.attr('src', '/14july.html');
-    setTimeout(function() { show2(); }, 1000 * 3);
+		if(FeaturedEvents.length > 1){
+			counter++
+			if(counter > FeaturedEvents.length){
+				counter = 0
+			}
+			setTimeout(function() { show1(); }, 1000 * 3);
+		}
 	}
-	function show2() { 
-		// iframe.attr('src', 'exitpoints4.html');
-		document.getElementById('myIframe').src = 'exitpoints4.html'
+	// function show2() { 
+	// 	// iframe.attr('src', 'exitpoints4.html');
+	// 	document.getElementById('myIframe').src = 'exitpoints4.html'
 
-		setTimeout(function() { show1(); }, 1000 * 3);
-	}
+	// 	setTimeout(function() { show1(); }, 1000 * 3);
+	// }
 
 	jQuery(document).ready(function() {
-		show1();
+		FeaturedEventsRoll();
 	});
 </script>
 
