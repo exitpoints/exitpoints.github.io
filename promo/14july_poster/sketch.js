@@ -1,6 +1,8 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  background(0);
+  pixelDensity(3.0);
+  var cnv = createCanvas(windowWidth, windowHeight);
+  cnv.style('display', 'block');
+  background(2);
 
 }
 
@@ -17,6 +19,7 @@ function draw() {
   
   let s = 'online audiovisual live performance';
   textSize(15);
+  smooth();
   text(s, 150, 120, 200, 500);
   
   textSize(20);
