@@ -381,7 +381,7 @@
     // iframe.attr('src', '/14july.html');
 		if(FeaturedEvents.length > 1){
 			counter++
-			if(counter > FeaturedEvents.length){
+			if(counter === FeaturedEvents.length){
 				counter = 0
 			}
 			setTimeout(function() { FeaturedEventsRoll(); }, 1000 * 5);
