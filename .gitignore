@@ -23,3 +23,5 @@ bin-release/
 *.avi
 *.mpeg
 *.flv
+
+.DS_Store

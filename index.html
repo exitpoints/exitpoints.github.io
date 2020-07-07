@@ -36,11 +36,11 @@
 				<nav id="nav">
 					<ul>
 						<!-- <li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li> -->
+						<li><a href="#Upcoming" id="portfolio-link"><span class="icon solid fa-th scrolly">Upcoming</span></a></li>
 						<li><a href="#livestream" id="liveStream"><span class="icon solid fa-th">Live Stream</span></a></li>
 						<li><a href="#tips" id="about-link"><span class="icon solid fa-user">Tip Jar PWYC</span></a></li>
 						<li><a href="#liveChat" id="contact-link"><span class="icon solid fa-envelope">Live Chat</span></a></li>
 						<li><a href="#openJam" id="contact-link"><span class="icon solid fa-envelope">Join the Jam</span></a></li>
-						<li><a href="#Concert_Listings" id="portfolio-link"><span class="icon solid fa-th scrolly">Upcoming</span></a></li>
 						<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Us</span></a></li>
 						
 						<li><a href="#tools" id="contact-link"><span class="icon solid fa-envelope">Tools</span></a></li>
@@ -159,7 +159,7 @@
 
 					<!-- ! TODO: how to add tip jar to website -->
 					<!-- <iframe src="https://exitpoints.stream/"></iframe> -->
-					<!-- <a href="#Concert_Listings" class="button scrolly">Concert Listings</a> -->
+					<!-- <a href="#Upcoming" class="button scrolly">Concert Listings</a> -->
 				<!-- </footer> -->
 
 				
@@ -199,7 +199,7 @@
 			</div>
 
 		<!-- </section> -->
-		<div> <a name="Concert_Listings"></a>
+		<div> <a name="Upcoming"></a>
 			<table>
 				<tr>
 					<th>
@@ -208,6 +208,10 @@
 				</tr>
 				<tr>
 					<td >
+						<input type="button" value="Change site" onClick="newSite()" />
+
+						<iframe id="myIframe" src="http://getprismatic.com/"></iframe>
+
 						<h3>Exit Points #6: Wednesday, July 29  @8pm EDT</h3>
 						Tyson Headon (electric bass)<br>
 						Jake Butineau (keys)<br>
@@ -353,6 +357,31 @@
 		modal: true,
 		resizable: false,
 		closeOnEscape: true
+	});
+
+	// iFrame loader
+	// function newSite() {
+    // var sites = ['http://getprismatic.com',
+    //              'http://gizmodo.com/',
+    //              'http://lifehacker.com/']
+
+    // document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
+	// }
+		iframe = document.getElementById('myIframe')
+	function show1() { 
+		document.getElementById('myIframe').src = '/14july.html'
+    // iframe.attr('src', '/14july.html');
+    setTimeout(function() { show2(); }, 1000 * 3);
+	}
+	function show2() { 
+		// iframe.attr('src', 'exitpoints4.html');
+		document.getElementById('myIframe').src = 'exitpoints4.html'
+
+		setTimeout(function() { show1(); }, 1000 * 3);
+	}
+
+	jQuery(document).ready(function() {
+		show1();
 	});
 </script>
 
