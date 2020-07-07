@@ -373,7 +373,8 @@
 	// }
 	let counter = 0
 	let FeaturedEvents = [
-		'/14july.html'
+		'/14july.html',
+		'/aBruyanteEvening.html'
 	]
 	function FeaturedEventsRoll() { 
 		document.getElementById('myIframe').src = FeaturedEvents[counter]
@@ -383,7 +384,7 @@
 			if(counter > FeaturedEvents.length){
 				counter = 0
 			}
-			setTimeout(function() { show1(); }, 1000 * 3);
+			setTimeout(function() { FeaturedEventsRoll(); }, 1000 * 5);
 		}
 	}
 	// function show2() { 
