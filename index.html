@@ -312,49 +312,33 @@
 		  </div> -->
 	</body>
 <script>
-	// $(document).ready(function(){
-	// 	// alert('This page runs best on chrome or firefox. If using a different browser, please watch directly at: \n\nhttps://www.twitch.tv/exitpointsmusic \nThanks!');
-	// 		$( "#dialog" ).dialog();
 
-	// 	// setTimeout(function(){
-	// 	// 	// $( "#dialog" ).dialog();
-	// 	// },2000); // 5000 to load it after 5 seconds from page load
-	// });
-//   $( function() {
-//     $( "#dialog" ).dialog();
-//   } );
-	// $("#dialog").dialog({
-	// 	// autoOpen: false,
-	// 	width: "50%",
-	// 	position: { my: 'top', at: 'top+50' },
-	// 	modal: true,
-	// 	resizable: false,
-	// 	closeOnEscape: true
-	// });
+	/*
+	// Edit the featuredEvents array to add/remove upcoming posters for the featured loop.
+	*/
+	let featuredEvents = ['/14july.html','/aBruyanteEvening.html', '/ep6.html', '/ep7.html']
+	min = Math.ceil(0);
+	max = Math.floor(featuredEvents.length);
+	let counter = Math.floor(Math.random() * (max - min)) + min;
 
-	// iFrame loader
-	// function newSite() {
-    // var sites = ['http://getprismatic.com',
-    //              'http://gizmodo.com/',
-    //              'http://lifehacker.com/']
-
-    // document.getElementById('myIframe').src = sites[Math.floor(Math.random() * sites.length)];
-	// }
-	let counter = 0
-	let FeaturedEvents = [
-		'/14july.html','/aBruyanteEvening.html', '/ep6.html', '/ep7.html'
-	]
-	function FeaturedEventsRoll() { 
-		document.getElementById('myIframe').src = FeaturedEvents[counter]
+	console.log(counter)
+	function featuredEventsRoll() { 
+		console.log(featuredEvents[counter])
+		document.getElementById('myIframe').src = featuredEvents[counter]
     // iframe.attr('src', '/14july.html');
-		if(FeaturedEvents.length > 1){
+		if(featuredEvents.length > 1){
 			counter++
-			if(counter === FeaturedEvents.length){
+			if(counter === featuredEvents.length){
 				counter = 0
 			}
-			setTimeout(function() { FeaturedEventsRoll(); }, 1000 * 10);
+			setTimeout(function() { featuredEventsRoll(); }, 1000 * 2);
 		}
 	}
+
+	jQuery(document).ready(function() {
+		featuredEventsRoll();
+	});
+
 	// function show2() { 
 	// 	// iframe.attr('src', 'exitpoints4.html');
 	// 	document.getElementById('myIframe').src = 'exitpoints4.html'
@@ -362,9 +346,7 @@
 	// 	setTimeout(function() { show1(); }, 1000 * 3);
 	// }
 
-	jQuery(document).ready(function() {
-		FeaturedEventsRoll();
-	});
+
 </script>
 
 	</html>
