@@ -2093,11 +2093,11 @@ input, select, textarea {
 
 		#header .icons {
 			font-size: 0.8em;
-			text-align: center;
+			text-align: right;
 		}
 
 			#header .icons a {
-				color: #41484c;
+				color: #f8fdff;
 				-moz-transition: color 0.35s ease-in-out;
 				-webkit-transition: color 0.35s ease-in-out;
 				-ms-transition: color 0.35s ease-in-out;
@@ -2105,7 +2105,7 @@ input, select, textarea {
 			}
 
 				#header .icons a:hover {
-					color: #fff;
+					color: rgb(84, 144, 249);
 				}
 
 	#logo {
@@ -2159,6 +2159,7 @@ input, select, textarea {
 				-webkit-transition: none;
 				-ms-transition: none;
 				transition: none;
+				
 			}
 
 				#nav ul li a span {
