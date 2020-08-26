@@ -1,5 +1,5 @@
 function setup() {
-  pixelDensity(3.0);
+  pixelDensity(2.0);
   var cnv = createCanvas(windowWidth, windowHeight);
   cnv.style('display', 'block');
   background(2);
@@ -61,10 +61,10 @@ function draw() {
   shearY(random(PI) / 0.9);
   circle(0, height / 2, random(300));
 
-  
+  /*
   textSize(30);
   fill(250, 20);
   text('NO EXIT', 23,300);
-  
+  */
 
 }
